@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.Parent{
+  background-color: #0094ff;
+  margin: 10px;
+  padding: 10px;
+  height: 300px;
+}
+.Child{
+  background-color: #47f3aa;
+  margin: 10px;
+  padding: 10px;
+  height: 100px;
+}
