@@ -40,11 +40,13 @@ import { IndiaComponent } from './india/india.component';
 import { UsaComponent } from './usa/usa.component';
 import { IndiaModuleModule } from "./india-module/india-module.module";
 import { UsaModuleModule } from "./usa-module/usa-module.module";
+import { TestComponent } from './src/test/test.component';
   @NgModule({
     declarations: [
       AppComponent,
       IndiaComponent,
-      UsaComponent
+      UsaComponent,
+      TestComponent
     ],
     imports: [
       BrowserModule, FormsModule, IndiaModuleModule, UsaModuleModule
