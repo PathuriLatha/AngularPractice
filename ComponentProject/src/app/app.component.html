@@ -34,4 +34,11 @@
   <p>{{keyupText}}</p>
   <p>{{keyupTextValue}}</p>
 </div>
+<div>
+  <input #box (keyup.enter)="update(box.blurValue)" (blur)="update(box.blurValue)" placeholder="blur">
+  <p>{{blurValue}}</p>
+
+</div>
 <app-employee></app-employee>
+<app-class-binding></app-class-binding>
+<app-structural-directives></app-structural-directives>

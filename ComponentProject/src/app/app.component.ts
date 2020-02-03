@@ -34,6 +34,11 @@ export class AppComponent {
     }
   }
 
+  blurValue = '';
+  update(value: string) {
+    this.blurValue = value;
+  }
+
   onClick(){
     this.test = "OnClick Event Handle";
     console.log("Button is clicked..!"+this.test);
