@@ -1,0 +1,76 @@
+<!--
+<p>structural-directives works!</p>
+-->
+
+<!-- ngIf directive -->
+<h1>ngIf directive</h1>
+<div>
+  <div *ngIf="displayName; then thenBlock; else elseBlock" >
+    {{name}}
+  </div>
+  <ng-template #thenBlock>
+    <div>Then Block</div>
+  </ng-template>
+  <ng-template #elseBlock>
+    <div> Else Block </div>
+  </ng-template>
+</div>
+
+<!-- ngSwitch directive -->
+<h1>ngSwitch directive</h1>
+<!--<select #mySelect>
+  <option>&#45;&#45;Select&#45;&#45;</option>
+  <option value="green">Green</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+</select>-->
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'green'">Green color is selected</div>
+  <div *ngSwitchCase="'red'">Red color is selected</div>
+  <div *ngSwitchCase="'blue'">Blue color is selected</div>
+  <div *ngSwitchDefault>Select any color</div>
+</div>
+
+<!-- ngFor directive -->
+<h1>ngFor directive</h1>
+<div *ngFor="let colorFor of colors">
+  <h4>{{colorFor}}</h4>
+</div>
+
+
+<div>
+  <!--<ul *ngFor="let person of people" *ngIf="person.age < 30">
+    <li>{{ person.name }}</li>
+  </ul>-->
+  <ul *ngFor="let person of people">
+    <li *ngIf="person.age < 30">
+      {{ person.name }} ({{ person.age }})
+    </li>
+  </ul>
+  <h4>Countries</h4>
+  <ul *ngFor="let persons of people" [ngSwitch]="persons.country">
+    <li *ngSwitchCase="'UK'" class="text-success">
+      {{ persons.name }} ({{ persons.country }})
+    </li>
+    <li *ngSwitchCase="'USA'" class="text-primary">
+      {{ persons.name }} ({{ persons.country }})
+    </li>
+    <li *ngSwitchCase="'Dubai'" class="text-danger">
+      {{ persons.name }} ({{ persons.country }})
+    </li>
+    <li *ngSwitchDefault class="text-warning">
+      {{ persons.name }} ({{ persons.country }})
+    </li>
+  </ul>
+</div>
+<div>
+<!--  <select [(ngModel)]>-->
+  <select>
+    <option *ngFor="let stu of students" [value]="stu.school">{{stu.name}}</option>
+  </select>
+</div>
+<div>
+  <ul *ngFor="let stu of students">
+    <li>{{stu.name}} ({{stu.school}})</li>
+  </ul>
+</div>

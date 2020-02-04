@@ -1,0 +1,23 @@
+<div class="parentClass">
+  <h3>Parent Component</h3>
+  <input type="text" [(ngModel)]="parentTextMessage"><br>
+  <!-- <app-child [childMessage]="parentMessage"></app-child> -->
+  <h4>Company</h4>
+  {{companyName}}<br>
+  <input type="button" value="Click me" (click)="onClickMeClicked()"><br>
+  <!--<app-child ></app-child>-->
+  Message: {{parentOutputMsg}}<br>
+  <table border="1px">
+    <tr *ngFor="let emp of employees">
+      <td width="50%">
+        {{emp}}
+      </td>
+      <td width="50%">
+        <input type="button" value="send To Child" (click)="setName(emp)">
+      </td>
+    </tr>
+  </table>
+  {{childCurrentVal}}
+  <!--<app-child [childMessage]="parentTextMessage" (messageEvent)="receiveMessage($event)" [childName]="Name" (outputToParent)="GetOutputVal($event)"></app-child>-->
+  <app-child [childMessage]="parentTextMessage" (messageEvent)="receiveMessage($event)" [childName]="Name" (outputToParent)="GetOutputVal($event)"></app-child>
+</div>

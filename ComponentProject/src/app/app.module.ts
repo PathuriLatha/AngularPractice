@@ -8,12 +8,19 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 
+import { ParentComponent } from '../parent/parent.component';
+import { ChildComponent } from '../parent/child/child.component'
+import { SiblingComponent } from '../parent/sibling/sibling.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     ClassBindingComponent,
-    StructuralDirectivesComponent
+    StructuralDirectivesComponent,
+    ParentComponent,
+    ChildComponent,
+    SiblingComponent
   ],
   imports: [
     BrowserModule,

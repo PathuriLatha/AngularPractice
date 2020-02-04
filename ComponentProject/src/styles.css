@@ -25,3 +25,20 @@ form{
   margin: auto;
   padding-top: 100px;
 }*/
+
+.parentClass{
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
+  padding: 30px;
+}
+.siblingClass{
+  border: 2px solid green;
+  background-color: green;
+}
+.childClass{
+  border: 2px solid pink;
+  background-color: pink;
+  padding: 30px;
+  color: #DB34C4;
+}
