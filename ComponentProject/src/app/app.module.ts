@@ -10,7 +10,9 @@ import { StructuralDirectivesComponent } from './structural-directives/structura
 
 import { ParentComponent } from '../parent/parent.component';
 import { ChildComponent } from '../parent/child/child.component'
-import { SiblingComponent } from '../parent/sibling/sibling.component'
+import { SiblingComponent } from '../parent/sibling/sibling.component';
+import { Sibling2Component } from '../parent/sibling2/sibling2.component';
+import { CompanyComponent } from './company/company.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SiblingComponent } from '../parent/sibling/sibling.component'
     StructuralDirectivesComponent,
     ParentComponent,
     ChildComponent,
-    SiblingComponent
+    SiblingComponent,
+    Sibling2Component,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,

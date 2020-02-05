@@ -17,7 +17,7 @@ export class ParentComponent implements OnInit {
   public parentTextMessage : string = "";
 
   public companyName: string = "ABC Company";
-  @ViewChild(ChildComponent) emp: ChildComponent;
+  @ViewChild(ChildComponent, {static: true}) emp: ChildComponent;
 
   public parentOutputMsg : string = "";
   receiveMessage(data){
