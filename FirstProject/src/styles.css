@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.ParentComponents{
+  float: left;
+  /*background-color: #91e3e9;*/
+  width: 500px;
+  height: 300px;
+  margin: 60px;
+  padding: 60px;
+}
+
+.ChildComponents{
+  float: left;
+  background-color: #28abdd;
+  width: 150px;
+  height: 100px;
+  margin: 10px;
+}
+h1, h3, h4{
+  text-align: center;
+}
+h4{
+  color: white
+}
+h1{
+  color: tomato;
+}
+h3{
+  /*color: blue;*/
+}
+
