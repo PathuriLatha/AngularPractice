@@ -1,0 +1,42 @@
+<div class="main">
+  <h1>Service Practice</h1>
+  <div class="calculations">
+    <h3>Calculations</h3>
+    <h4>Sum is {{sum}}</h4>
+  </div>
+  <div class="login">
+    <h3>Services</h3>
+    <form>
+      <h4>Login Service</h4>
+      UserName: <input type="text" [(ngModel)]="userName" name="userName"><br>
+      Password: <input type="text" [(ngModel)]="password" name="password"><br>
+      <input type="button" value="Login" (click)="checkLogin()"><br>
+      <h4>{{loginMessage}}</h4>
+    </form>
+  </div>
+
+  <div class="sharingData">
+    <h4>Sharing Data using Services</h4>
+    <app-india></app-india>
+    <app-usa></app-usa>
+  </div>
+
+  <div class="employees">
+    <app-employee-list></app-employee-list>
+    <app-employee-details></app-employee-details>
+  </div>
+
+  <div class="popcorn">
+    <input type="number" #qty placeholder="How many bags?">
+    <button type="button" (click)="cookIt(qty.value)">Cook It</button><br>
+    <h4>{{popcornMsg}}</h4>
+  </div>
+
+  <div class="unrelated">
+    <app-parent></app-parent>
+    <app-sibling></app-sibling>
+  </div>
+
+</div>
+
+

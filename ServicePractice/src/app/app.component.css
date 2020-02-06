@@ -1,0 +1,28 @@
+.main, .sharingData, .employees, .unrelated, .popcorn, .calculations, login{
+  padding: 10px;
+  margin: 20px;
+}
+
+.main{
+  border: 2px solid #FFC300;
+}
+.sharingData{
+  border: 2px solid #93260F;
+}
+.employees{
+  border: 2px dotted #850F93;
+}
+.unrelated{
+  border: 2px dotted #0F938D;
+}
+.popcorn{
+  border: 2px solid #910F93;
+}
+.calculations{
+  border: 2px dotted #0F1B93;
+}
+.login{
+  border: 2px solid pink;
+  padding: 20px;
+  margin: 20px;
+}

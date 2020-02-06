@@ -1,0 +1,11 @@
+<div class="employeesDetails">
+  <h3>Employee Details</h3>
+  <!--<ul *ngFor="let empDetails of employees">
+    <li>Id : {{empDetails.id}}</li>
+    <li>Name : {{empDetails.name}}</li>
+    <li>Age : {{empDetails.age}}</li>
+  </ul>-->
+  <ul *ngFor="let empDetails of employees">
+    <li>{{empDetails.id}}. {{empDetails.name}} - {{empDetails.age}}</li>
+  </ul>
+</div>
