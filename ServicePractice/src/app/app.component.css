@@ -1,4 +1,4 @@
-.main, .sharingData, .employees, .unrelated, .popcorn, .calculations, login{
+.main, .sharingData, .employees, .unrelated, .popcorn, .calculations, login, .pipes, .customPipe, .enum{
   padding: 10px;
   margin: 20px;
 }
@@ -25,4 +25,13 @@
   border: 2px solid pink;
   padding: 20px;
   margin: 20px;
+}
+.pipes{
+  border: 2px solid blue;
+}
+.customPipe{
+  border: 2px solid pink;
+}
+.enum{
+  border: 2px dotted yellow;
 }

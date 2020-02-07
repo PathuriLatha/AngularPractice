@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +15,9 @@ import { PopcornService } from './popcorn.service';
 import { SiblingComponent } from '../sibling/sibling.component';
 import { ParentComponent } from '../parent/parent.component';
 import { DataService } from './data.service';
+import { DurationPipe } from './duration.pipe';
+import { MultiplierPipe } from './multiplier.pipe';
+import { EnumCompComponent } from './enum-comp/enum-comp.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import { DataService } from './data.service';
     EmployeeListComponent,
     EmployeeDetailsComponent,
     ParentComponent,
-    SiblingComponent
+    SiblingComponent,
+    DurationPipe,
+    MultiplierPipe,
+    EnumCompComponent
   ],
   imports: [
     BrowserModule,

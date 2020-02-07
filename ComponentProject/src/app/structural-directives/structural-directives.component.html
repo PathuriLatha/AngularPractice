@@ -42,13 +42,18 @@
   <!--<ul *ngFor="let person of people" *ngIf="person.age < 30">
     <li>{{ person.name }}</li>
   </ul>-->
-  <ul *ngFor="let person of people">
-    <li *ngIf="person.age < 30">
+  <ul *ngFor="let person of people"
+      [ngClass]="{ 'text-success': (person.age <= 11) && (person.age >= 0),
+                    'text-primary': (person.age) <= 25 && (person.age >= 12),
+                    'text-danger': (person.age) <= 40 && (person.age >= 26)
+       }">
+    <li *ngIf="person.age <= 30">
       {{ person.name }} ({{ person.age }})
     </li>
   </ul>
   <h4>Countries</h4>
-  <ul *ngFor="let persons of people" [ngSwitch]="persons.country">
+  <ul *ngFor="let persons of people" [ngSwitch]="persons.country"
+      [ngStyle]="{ 'color': persons.country === 'UK' ? 'blue' : 'red' }" >
     <li *ngSwitchCase="'UK'" class="text-success">
       {{ persons.name }} ({{ persons.country }})
     </li>
@@ -70,7 +75,15 @@
   </select>
 </div>
 <div>
-  <ul *ngFor="let stu of students">
+  <ul *ngFor="let stu of students" [ngClass]="{ 'text-success': stu.school === 'ZPHS', 'text-primary': stu.school === 'Vignan', 'text-danger': stu.school === 'DR.KVR' }">
     <li>{{stu.name}} ({{stu.school}})</li>
   </ul>
+</div>
+
+<div>
+  <h1>ngStyle directive</h1>
+</div>
+
+<div>
+  <h1>ngClass directive</h1>
 </div>

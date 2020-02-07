@@ -35,7 +35,7 @@ export class StructuralDirectivesComponent implements OnInit {
     {
       "name": "Lasya",
       "age": 11,
-      "country" : "Australia"
+      "country" : "UK"
     }
   ];
 
@@ -54,7 +54,7 @@ export class StructuralDirectivesComponent implements OnInit {
     },
     {
       name: "Loukhya",
-      school: "Chaithanya Bharathi"
+      school: "ZPHS"
     }
   ];
 

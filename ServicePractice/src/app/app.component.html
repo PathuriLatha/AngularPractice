@@ -37,6 +37,99 @@
     <app-sibling></app-sibling>
   </div>
 
-</div>
+  <div class="pipes">
+    <h2>Built-in Pipes</h2>
+    <ul>
+      <li>City: {{city}}</li>
+      <li>Salary: {{salary}}</li>
+      <li>number: {{no}}</li>
+      <li>Current time: {{dt}}</li>
+      <li>Person: {{person}}</li>
+      <li>titleCase: {{titleCase | titlecase}}</li>
+      <!--<li>number with duration: {{no | duration:'hoursandminutes'}} </li>-->
+    </ul>
+    <hr>
+    <h4>Pipes with uppercase and lowercase and slice</h4>
+    <ul>
+      <li>Uppercase: {{city | uppercase}}</li>
+      <li>Lowercase: {{city | lowercase}}</li>
+      <li>Lowercase with slice2:6 : {{city | slice: 2:6}}</li>
+    </ul>
+    <hr>
+    <h4>Pipes with number and percent</h4>
+    <ul>
+      <li>salary in number: {{salary | number}}</li>
+      <li>salary in number .2: {{salary | number: ".2"}}</li>
+      <li>number (percent): {{no | percent}}</li>
+    </ul>
+    <hr>
+    <h4>Pipes with currency</h4>
+    <ul>
+      <li>currency: {{salary | currency: "USD"}}</li>
+      <li>INR: {{salary | currency: "INR"}}</li>
+      <li>GBP: {{salary | currency: "GBP"}}</li>
+      <li>EUR: {{salary | currency: "EUR"}}</li>
+    </ul>
+    <hr>
+    <h4>Pipes with json</h4>
+    <ul>
+      <li>json: {{person | json}}</li>
+    </ul>
+    <hr>
+    <h4>Pipes with date</h4>
+    <ul>
+      <li>Short date: {{dt | date: "shortDate"}}</li>
+      <li>Medium date: {{dt | date: "mediumDate"}}</li>
+      <li>Long date: {{dt | date: "longDate"}}</li>
+      <li>Full date: {{dt | date: "fullDate"}}</li>
+      <li>Short time: {{dt | date: "shortTime"}}</li>
+      <li>Long time: {{dt | date: "mediumTime"}}</li>
+      <li>Short: {{dt | date: "short"}}</li>
+      <li>Medium: {{dt | date: "medium"}}</li>
+      <li>d/M/y: {{dt | date: "d/M/y"}}</li>
+      <li>y-M-d: {{dt | date: "y-M-d"}}</li>
+      <li>h:m:s: {{dt | date: "h:m:s"}}</li>
+      <li>H:m: {{dt | date: "H:m"}}</li>
+      <li>a: {{dt | date: "a"}}</li>
+      <li>EEE: {{dt | date: "EEE"}}</li>
+      <li>EEEE: {{dt | date: "EEEE"}}</li>
+      <li>MMM: {{dt | date: "MMM"}}</li>
+      <li>MMMM: {{dt | date: "MMMM"}}</li>
+      <li>Z: {{dt | date: "Z"}}</li>
+    </ul>
+  </div>
+  <div class="customPipe">
+    <h2>Custom pipe</h2>
+    <h4>Pipe with custom duration</h4>
+    <ul>
+      <li>Video duration: {{videoDuration | duration}}</li>
+      <li>Video duration with hoursandminutes: {{videoDuration | duration: 'hoursandminutes'}}</li>
+      <li>Video duration with hoursonly: {{videoDuration | duration: 'hoursonly'}}</li>
+    </ul>
+    <hr>
+    <h4>Pipe with custom multiplier</h4>
+    <ul>
+      <li>10 multiplier with 20: {{10 | multiplier:20}}</li>
+      <li>2 multiplier with 12: {{2 | multiplier:12}}</li>
+      <li>567 multiplier with 1234: {{567 | multiplier:1234}}</li>
+      <li>23 multiplier with 32: {{23 | multiplier:32}}</li>
+    </ul>
+  </div>
+  <div class="enum">
+    <h2 [ngStyle]="{'color': '#6C3483'}">Enum practice</h2>
+    <!--<h2 style="color: red; background-color: yellow">Enum practice</h2>-->
 
+    <!--<ul *ngFor="let day of weekDays">
+      <li>{{day}}</li>
+    </ul>-->
+    <!--<h4>{{weekDays}}</h4>-->
+
+    <app-enum-comp enumName="{{ enumName }}" [color]="selectedColor"></app-enum-comp>
+    <button [ngStyle]="{'color': 'white', 'background-color': 'red'}" (click)="this.onColorClick(colors.Red)">Red</button>
+
+    <button [ngStyle]="{'color': 'white', 'background-color': 'green'}" (click)="this.onColorClick(colors.Green)">Green</button>
+
+    <button [ngStyle]="{'color': 'white', 'background-color': 'blue'}" (click)="this.onColorClick(colors.Blue)">Blue</button>
+  </div>
+</div>
 
