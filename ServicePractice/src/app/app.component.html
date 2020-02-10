@@ -1,22 +1,22 @@
 <div class="main">
-  <h1>Service Practice</h1>
+  <h1 class="text-primary text-center">Service Practice</h1>
   <div class="calculations">
-    <h3>Calculations</h3>
+    <h3 class="text-info">Calculations</h3>
     <h4>Sum is {{sum}}</h4>
   </div>
   <div class="login">
-    <h3>Services</h3>
+    <h3 class="">Services</h3>
     <form>
-      <h4>Login Service</h4>
-      UserName: <input type="text" [(ngModel)]="userName" name="userName"><br>
-      Password: <input type="text" [(ngModel)]="password" name="password"><br>
-      <input type="button" value="Login" (click)="checkLogin()"><br>
-      <h4>{{loginMessage}}</h4>
+      <h4 class="text-warning">Login Service</h4>
+      UserName: <input class="form-control" type="text" [(ngModel)]="userName" name="userName"><br>
+      Password: <input class="form-control" type="text" [(ngModel)]="password" name="password"><br>
+      <input class="btn btn-primary" type="button" value="Login" (click)="checkLogin()"><br>
+      <h4 class="text-primary">{{loginMessage}}</h4>
     </form>
   </div>
 
   <div class="sharingData">
-    <h4>Sharing Data using Services</h4>
+    <h4 class="text-danger">Sharing Data using Services</h4>
     <app-india></app-india>
     <app-usa></app-usa>
   </div>
@@ -38,7 +38,7 @@
   </div>
 
   <div class="pipes">
-    <h2>Built-in Pipes</h2>
+    <h2 class="text-success">Built-in Pipes</h2>
     <ul>
       <li>City: {{city}}</li>
       <li>Salary: {{salary}}</li>
@@ -49,21 +49,22 @@
       <!--<li>number with duration: {{no | duration:'hoursandminutes'}} </li>-->
     </ul>
     <hr>
-    <h4>Pipes with uppercase and lowercase and slice</h4>
+    <h4 class="text-info">Pipes with uppercase and lowercase and slice</h4>
     <ul>
       <li>Uppercase: {{city | uppercase}}</li>
       <li>Lowercase: {{city | lowercase}}</li>
-      <li>Lowercase with slice2:6 : {{city | slice: 2:6}}</li>
+      <li>Lowercase with slice as one parameter(2) : {{city | slice: 2}}</li>
+      <li>Lowercase with slice as two parameter(2,5) : {{city | slice: 2:5}}</li>
     </ul>
     <hr>
-    <h4>Pipes with number and percent</h4>
+    <h4 class="text-info">Pipes with number and percent</h4>
     <ul>
       <li>salary in number: {{salary | number}}</li>
       <li>salary in number .2: {{salary | number: ".2"}}</li>
       <li>number (percent): {{no | percent}}</li>
     </ul>
     <hr>
-    <h4>Pipes with currency</h4>
+    <h4 class="text-info">Pipes with currency</h4>
     <ul>
       <li>currency: {{salary | currency: "USD"}}</li>
       <li>INR: {{salary | currency: "INR"}}</li>
@@ -71,12 +72,12 @@
       <li>EUR: {{salary | currency: "EUR"}}</li>
     </ul>
     <hr>
-    <h4>Pipes with json</h4>
+    <h4 class="text-info">Pipes with json</h4>
     <ul>
       <li>json: {{person | json}}</li>
     </ul>
     <hr>
-    <h4>Pipes with date</h4>
+    <h4 class="text-info">Pipes with date</h4>
     <ul>
       <li>Short date: {{dt | date: "shortDate"}}</li>
       <li>Medium date: {{dt | date: "mediumDate"}}</li>
@@ -99,21 +100,26 @@
     </ul>
   </div>
   <div class="customPipe">
-    <h2>Custom pipe</h2>
-    <h4>Pipe with custom duration</h4>
+    <h2 class="text-success">Custom pipe</h2>
+    <h4  class="text-info">Pipe with custom duration</h4>
     <ul>
       <li>Video duration: {{videoDuration | duration}}</li>
       <li>Video duration with hoursandminutes: {{videoDuration | duration: 'hoursandminutes'}}</li>
       <li>Video duration with hoursonly: {{videoDuration | duration: 'hoursonly'}}</li>
     </ul>
     <hr>
-    <h4>Pipe with custom multiplier</h4>
+    <h4 class="text-info">Pipe with custom multiplier</h4>
     <ul>
       <li>10 multiplier with 20: {{10 | multiplier:20}}</li>
       <li>2 multiplier with 12: {{2 | multiplier:12}}</li>
       <li>567 multiplier with 1234: {{567 | multiplier:1234}}</li>
       <li>23 multiplier with 32: {{23 | multiplier:32}}</li>
     </ul>
+    <hr>
+    <h4 class="text-info">Pipe with custom SquareRoot</h4>
+    <li>Square root of 625 is : {{625 | squareRoot}}</li>
+    <li>Square root of 169 is : {{169 | squareRoot}}</li>
+    <li>Square root of 225 is : {{225 | squareRoot}}</li>
   </div>
   <div class="enum">
     <h2 [ngStyle]="{'color': '#6C3483'}">Enum practice</h2>

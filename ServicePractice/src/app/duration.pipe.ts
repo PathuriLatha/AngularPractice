@@ -15,7 +15,7 @@ export class DurationPipe implements PipeTransform {
       s = Math.floor(value/60)+" hrs "+((value%60 > 0)?(" and "+value%60)+ " mins": "");
     }
     else{
-      s = value;
+      s = value.toString();
     }
     return s;
   }

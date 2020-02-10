@@ -18,6 +18,7 @@ import { DataService } from './data.service';
 import { DurationPipe } from './duration.pipe';
 import { MultiplierPipe } from './multiplier.pipe';
 import { EnumCompComponent } from './enum-comp/enum-comp.component';
+import { SquareRootPipe } from './square-root.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EnumCompComponent } from './enum-comp/enum-comp.component';
     SiblingComponent,
     DurationPipe,
     MultiplierPipe,
-    EnumCompComponent
+    EnumCompComponent,
+    SquareRootPipe
   ],
   imports: [
     BrowserModule,
